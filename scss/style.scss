@@ -54,7 +54,7 @@ body {
   section {
     display: none;
     text-align: center;
-    transition: 2s;
+    transition: 1.5s;
     padding: 0 50px;
     position: relative;
     transform: translateX(-8000px);
@@ -101,7 +101,7 @@ body {
   height: 520px;
   width: 3px;
   background: white;
-  animation: come 2s linear;
+  animation: come 1.4s linear;
 }
 
 .active::before {
