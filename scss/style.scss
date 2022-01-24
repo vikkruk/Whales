@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(12, 38, 107);
+  background-repeat: no-repeat;
+  font-family: lucida;
+  font-size: 30px;
+  color: white;
+
+  header {
+    text-align: center;
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 40px;
+      letter-spacing: 5px;
+      font-size: 1.5em;
+    }
+    button {
+      height: 50px;
+      width: 100px;
+      margin: 10px;
+      margin-bottom: 40px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      color: rgb(41, 81, 190);
+      font-size: 0.8em;
+      position: relative;
+    }
+
+    .active {
+      cursor: pointer;
+      border: 3px solid white;
+      background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+      color: white;
+    }
+
+    button:hover {
+      cursor: pointer;
+      border: 3px solid white;
+      background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+      color: white;
+    }
+
+    button:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+
+  section {
+    display: none;
+    text-align: center;
+    transition: 1s;
+    padding: 0 50px;
+    position: relative;
+    transform: translateX(-8000px);
+
+    img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 40%;
+      opacity: 0;
+    }
+
+    iframe {
+      opacity: 0;
+    }
+
+    #secondpic {
+      object-position: 50% 80%;
+    }
+
+    p {
+      font-style: italic;
+      padding: 20px 0;
+      position: relative;
+    }
+  }
+}
+
+.visible {
+  display: block;
+  border-bottom: 2px solid white;
+  border-radius: 10%;
+}
+
+.transform {
+  transform: translateY(0);
+}
+
+.transform::after {
+  position: absolute;
+  content: "";
+  right: 30px;
+  top: 0;
+  height: 600px;
+  width: 3px;
+  background: white;
+  animation: come 0.8s linear;
+}
+
+.active::before {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 28px;
+  height: 2px;
+  width: 40px;
+  background: white;
+  animation: bounce 1s infinite alternate linear;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-11px);
+  }
+  to {
+    transform: translateX(9px);
+  }
+}
+
+@keyframes come {
+  from {
+    transform: translateX(1150px);
+  }
+  to {
+    transform: translateX(-8px);
+  }
+}
