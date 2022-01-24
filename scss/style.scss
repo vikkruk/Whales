@@ -54,7 +54,7 @@ body {
   section {
     display: none;
     text-align: center;
-    transition: 1s;
+    transition: 2s;
     padding: 0 50px;
     position: relative;
     transform: translateX(-8000px);
@@ -98,10 +98,10 @@ body {
   content: "";
   right: 30px;
   top: 0;
-  height: 600px;
+  height: 540px;
   width: 3px;
   background: white;
-  animation: come 0.8s linear;
+  animation: come 2s linear;
 }
 
 .active::before {
@@ -130,7 +130,7 @@ body {
 
 @keyframes come {
   from {
-    transform: translateX(1150px);
+    transform: translateX(12150px);
   }
   to {
     transform: translateX(-8px);
